@@ -22,7 +22,7 @@
 		border: none;
 	}
 	#Web_1920__3 {
-		position: absolute;
+		position: relative;
 		width: 1920px;
 		height: 1080px;
 		background-color: rgba(255,255,255,1);
@@ -154,6 +154,10 @@
 		overflow: visible;
 		transform: matrix(1,0,0,1,385.5231,925.9569) rotate(90deg);
 		transform-origin: center;
+		--web-animation: fadein 0.3s ease-out;
+		--web-action-type: page;
+		--web-action-target: Web_1920___1.html;
+		cursor: pointer;
 	}
 	#Intersection_5 {
 		fill: rgba(255,255,255,1);
@@ -3297,7 +3301,7 @@ window.application = new Application();
 		</path>
 	</svg>
 	<svg class="Rectangle_26">
-		<rect id="Rectangle_26" rx="0" ry="0" x="0" y="0" width="24.579" height="37.551">
+		<rect onclick="application.goToTargetView(event)" id="Rectangle_26" rx="0" ry="0" x="0" y="0" width="24.579" height="37.551">
 		</rect>
 	</svg>
 	<svg class="Intersection_5" viewBox="0 0.001 106.708 72.587">

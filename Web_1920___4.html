@@ -22,7 +22,7 @@
 		border: none;
 	}
 	#Web_1920__4 {
-		position: absolute;
+		position: relative;
 		width: 1920px;
 		height: 1080px;
 		background-color: rgba(255,255,255,1);
@@ -31,6 +31,16 @@
 		--web-view-id: Web_1920__4;
 		--web-scale-on-resize: true;
 		--web-enable-deep-linking: true;
+	}
+	@keyframes fadein {
+	
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	
 	}
 	#SOT_2 {
 		position: absolute;
@@ -144,6 +154,10 @@
 		overflow: visible;
 		transform: matrix(1,0,0,1,438.9651,940.0448) rotate(90deg);
 		transform-origin: center;
+		--web-animation: fadein 0.3s ease-out;
+		--web-action-type: page;
+		--web-action-target: Web_1920___1.html;
+		cursor: pointer;
 	}
 </style>
 <script id="applicationScript">
@@ -3009,7 +3023,7 @@ window.application = new Application();
 		</path>
 	</svg>
 	<svg class="Rectangle_21">
-		<rect id="Rectangle_21" rx="0" ry="0" x="0" y="0" width="27.298" height="41.921">
+		<rect onclick="application.goToTargetView(event)" id="Rectangle_21" rx="0" ry="0" x="0" y="0" width="27.298" height="41.921">
 		</rect>
 	</svg>
 </div>
